@@ -1,12 +1,5 @@
 // declare the angular application first (module called "myApp")
-// and declare our dependencies (ngRoute, Angular's default routing service)
-angular.module('myApp',['ngRoute'])
-  .config(function($routeProvider) {
-    $routeProvider.when('/', {
-      templateUrl: 'homeView.html',
-      controller: 'myAppController'
-    });
-  })
+angular.module('myApp')
   .controller('myAppController', function($scope) {
     $scope.user = {};
     $scope.user.firstName = 'Joe';
