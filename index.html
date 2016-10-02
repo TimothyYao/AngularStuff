@@ -10,8 +10,8 @@
   <script>
     angular.module('myApp', [])
       .controller('myAppController', ['$scope', function($scope) {
-        $scope.user.firstName = 'Joe';
-        $scope.user.lastName = 'Pesci';
+        $scope.user_firstName = 'Joe';
+        $scope.user_lastName = 'Pesci';
       }]);
   </script>
   <div ng-controller="myAppController">
@@ -19,13 +19,13 @@
     I've provided an initial first name for you.
     <br>
     <br>
-    User first name: <input type="text" ng-model="user.firstName"/><br>
-    User last name: <input type="text" ng-model="user.lastName"/><br>
+    User first name: <input type="text" ng-model="user_firstName"/><br>
+    User last name: <input type="text" ng-model="user_lastName"/><br>
     </br>
-    <span ng-show="user.firstName.length || user.lastName.length">
+    <span ng-show="user_firstName.length || user_lastName.length">
       Ok, so far I have:<br>
-      First name: <span ng-bind="user.firstName"></span><br>
-      Last name: <span ng-bind="user.lastName"></span><br>
+      First name: <span ng-bind="user_firstName"></span><br>
+      Last name: <span ng-bind="user_lastName"></span><br>
     </span>
   </div>
 </body>
