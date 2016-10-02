@@ -2,6 +2,27 @@ doctype html
 html
   head
     title= title
+    meta(name='description', content='AngularJS test project')
+    meta(name='author', content='LanceWiu and Yaotime')
     link(rel='stylesheet', href='/stylesheets/style.css')
-  body
+    link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+    link(rel='stylesheet', href='/stylesheets/ie10-viewport-bug-workaround.css')
+    script(src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js")
+  body(ng-app='myApp')
+    nav.navbar.navbar-inverse.navbar-fixed-top
+        .container
+          .navbar-header
+            button.navbar-toggle.collapsed(type='button', data-toggle='collapse', data-target='#navbar', aria-expanded='false', aria-controls='navbar')
+              span.sr-only Toggle navigation
+              span.icon-bar
+              span.icon-bar
+              span.icon-bar
+            a.navbar-brand(href='#') Angular Stuff
+          #navbar.navbar-collapse.collapse
+            form.navbar-form.navbar-right
     block content
+  script(src='javascripts/jquery.min.js')
+  script.
+    window.jQuery || document.write('<script src="js/jquery.min.js"><\\/script>')
+  script(src='javascripts/bootstrap.min.js')
+  script(src='javascripts/ie10-viewport-bug-workaround.js')

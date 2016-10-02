@@ -1,5 +1,34 @@
 extends layout
 
 block content
-  h1= title
-  p Welcome to #{title}
+  script.
+    angular.module('myApp', [])
+    .controller('myAppController', ['$scope', function($scope) {
+    $scope.user_firstName = 'Joe';
+    $scope.user_lastName = 'Pesci';
+    }]);
+  .container
+    .div(ng-controller='myAppController')
+      .row
+        .col-md-12
+          h1 Yo
+          p Hi. Please enter user's first and last name.
+          p I've provided an initial first name for you.
+      .row
+        .col-md-5
+          label User Input
+          .input-group
+            span#user_firstName.input-group-addon User first name:
+            input#firstname.form-control(type='text', aria-describedby='user_firstName', ng-model='user_firstName')
+          .input-group
+            span#user_lastName.input-group-addon User first name:
+            input.form-control(type='text', aria-describedby='user_lastName', ng-model='user_lastName')
+        .col-md-7
+          label Dynamic Data
+          span(ng-show='user_firstName.length || user_lastName.length')
+            p
+              | First name:&nbsp;
+              span(ng-bind='user_firstName')
+            p
+              | Last name:&nbsp;
+              span(ng-bind='user_lastName')
