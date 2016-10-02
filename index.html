@@ -4,8 +4,8 @@
 <script>
   angular.module('myApp', [])
     .controller('myAppController', ['$scope', function($scope) {
-      $scope.user.lastName = 'Pesci';
       $scope.user.firstName = 'Joe';
+      $scope.user.lastName = 'Pesci';
     }]);
 </script>
 
@@ -14,15 +14,13 @@
   I've provided an initial first name for you.
   <br>
   <br>
-  <form name="userForm" ng-model-options="{ getterSetter: true}">
-  User first name: <input ng-model="user.firstName"/><br>
-  User last name: <input ng-model="user.lastName"/><br>
-  </form>
+  User first name: <input type="text" ng-model="user.firstName"/><br>
+  User last name: <input type="text" ng-model="user.lastName"/><br>
   </br>
   <div>
     <span ng-show="user.firstName.length || user.lastName.length">
       Ok, so far I have:<br>
-      First name: <span ng-bind="user.firstName"></span> <br>
+      First name: <span ng-bind="user.firstName"></span><br>
       Last name: <span ng-bind="user.lastName"></span><br>
     </span>
   </div>
