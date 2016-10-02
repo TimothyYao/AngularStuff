@@ -1,23 +1,27 @@
+<!doctype html>
 <html>
 
-<script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
-<script>
-  angular.module('myApp', [])
-    .controller('myAppController', ['$scope', function($scope) {
-      $scope.user.firstName = 'Joe';
-      $scope.user.lastName = 'Pesci';
-    }]);
-</script>
+<head>
+  <title>ng-bind test</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.7/angular.min.js"></script>
+</head>
 
-<div ng-controller="myAppController">
-  Hi.  Please enter user's first and last name.<br>
-  I've provided an initial first name for you.
-  <br>
-  <br>
-  User first name: <input type="text" ng-model="user.firstName"/><br>
-  User last name: <input type="text" ng-model="user.lastName"/><br>
-  </br>
-  <div>
+<body ng-app="myApp">
+  <script>
+    angular.module('myApp', [])
+      .controller('myAppController', ['$scope', function($scope) {
+        $scope.user.firstName = 'Joe';
+        $scope.user.lastName = 'Pesci';
+      }]);
+  </script>
+  <div ng-controller="myAppController">
+    Hi.  Please enter user's first and last name.<br>
+    I've provided an initial first name for you.
+    <br>
+    <br>
+    User first name: <input type="text" ng-model="user.firstName"/><br>
+    User last name: <input type="text" ng-model="user.lastName"/><br>
+    </br>
     <span ng-show="user.firstName.length || user.lastName.length">
       Ok, so far I have:<br>
       First name: <span ng-bind="user.firstName"></span><br>
@@ -25,5 +29,4 @@
     </span>
   </div>
 </body>
-
 </html>
