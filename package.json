@@ -1,0 +1,19 @@
+{
+  "name": "angularstuff",
+  "version": "1.1.0",
+  "description": "test",
+  "main": "index.js",
+  "scripts": {
+    "test": "make test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/TimothyYao/AngularStuff.git"
+  },
+  "author": "Omelette du Fromage",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/TimothyYao/AngularStuff/issues"
+  },
+  "homepage": "https://github.com/TimothyYao/AngularStuff#readme"
+}
